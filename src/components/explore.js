@@ -4,6 +4,7 @@ import { Button, View, Text, TextInput, StyleSheet } from "react-native";
 function Explore({ change, text, onChangeText }) {
   const handlePress = () => {
     console.log(text);
+    change("Home");
   };
   return (
     <View

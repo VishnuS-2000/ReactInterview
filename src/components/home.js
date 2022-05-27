@@ -1,19 +1,23 @@
 import React from "react";
 import { Button, View, Text } from "react-native";
 
-function Home({ text }) {
+function Home({ text, change }) {
+  const handlePress = () => {
+    change("Profile");
+  };
+
   return (
     <View
       style={{
         flex: 1,
         justifyContent: "center",
         padding: "5rem",
-        alignItems: "flex-start",
+        alignItems: "center",
         flexDirection: "row"
       }}
     >
       <Text>{text}</Text>
-      <Button>Go to Profile</Button>
+      <Button title="Go to Profile" onPress={handlePress} />
     </View>
   );
 }
